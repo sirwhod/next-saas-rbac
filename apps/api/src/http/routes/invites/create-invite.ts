@@ -8,6 +8,7 @@ import { BadRequestError } from '@/http/routes/_errors/bad-request-error'
 import { UnauthorizedError } from '@/http/routes/_errors/unauthorized-error'
 import { prisma } from '@/lib/prisma'
 import { getUserPermissions } from '@/utils/get-user-permissions'
+
 export async function createInvite(app: FastifyInstance) {
   app
     .withTypeProvider<ZodTypeProvider>()
