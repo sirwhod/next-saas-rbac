@@ -13,15 +13,17 @@ export async function auth() {
   const cookieStore = await cookies()
   const token = cookieStore.get('token')?.value
 
+  console.log('cookieStore', token)
+
   if (!token) {
     redirect('/auth/sign-in')
   }
 
   try {
     const { user } = await getProfile()
-
     return { user }
-  } catch {}
-
-  redirect('/api/auth/sign-out')
+  } catch (error) {
+    console.error('Erro ao buscar perfil:', error)
+    redirect('/api/auth/sign-out')
+  }
 }
