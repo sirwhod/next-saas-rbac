@@ -2,9 +2,6 @@ import { Header } from '@/components/header'
 
 export default async function Home() {
   return (
-    <div className="py-4">
-      <Header />
-      <main></main>
-    </div>
+    <h1 className="text-2xl font-bold">Select an Organization</h1>
   )
 }
