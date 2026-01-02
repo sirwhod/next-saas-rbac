@@ -1,11 +1,17 @@
+import { Header } from "@/components/header";
 import { OrganizationForm } from "./organization-form";
 
 
 export default function CreateOrganizationPage() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">Create Organization Page</h1>
-      <OrganizationForm />
+    <div className="space-y-4 py-4">
+      <Header />
+      <main className="mx-auto w-full max-w-[1200px]">
+        <div className="space-y-4">
+          <h1 className="text-2xl font-bold">Create Organization Page</h1>
+          <OrganizationForm />
+        </div>
+      </main>
     </div>
   );
 }
